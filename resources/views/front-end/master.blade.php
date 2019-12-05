@@ -8,6 +8,7 @@
     <link href="{{ asset('/') }}/front-end/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!--theme-style-->
     <link href="{{ asset('/') }}/front-end/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('/') }}/front-end/assets/css/etalage.css" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script type="application/x-javascript">
@@ -24,6 +25,24 @@
     <!--//fonts-->
     <script src="{{ asset('/') }}/front-end/assets/js/jquery.min.js"></script>
     <!--script-->
+    <script src="{{ asset('/') }}/front-end/assets/js/jquery.etalage.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+
+        $('#etalage').etalage({
+            thumb_image_width: 300,
+            thumb_image_height: 400,
+            source_image_width: 900,
+            source_image_height: 1200,
+            show_hint: true,
+            click_callback: function(image_anchor, instance_id) {
+                alert('Callback example:\nYou clicked on an image with the anchor: "' +
+                    image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+            }
+        });
+
+    });
+    </script>
     <title>@yield('title')</title>
 </head>
 
@@ -86,7 +105,7 @@
                     <div class="account"><a href="{{ route('customerLogin') }}"><span> </span>YOUR ACCOUNT</a></div>
                     <ul class="login">
                         <li><a href="{{ route('customerLogin') }}"><span> </span>LOGIN</a></li> |
-                        <li><a href="{{ route('customerRegister') }}">SIGNUP</a></li>
+                        <li><a href="{{ route('customerRegister') }} ">SIGNUP</a></li>
                     </ul>
                     <div class="cart"><a href="#"><span> </span>CART</a></div>
                     <div class="clearfix"> </div>

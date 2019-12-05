@@ -10,6 +10,9 @@ class ProductController extends Controller
         return view('front-end.products.allproducts');
     }
     public function womanProduct(){
+        return view('front-end.products.wproducts');
+    }
+    public function singleProduct(){
         return view('front-end.products.product');
     }
 }

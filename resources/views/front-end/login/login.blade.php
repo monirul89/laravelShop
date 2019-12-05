@@ -1,11 +1,13 @@
 @extends('front-end.master')
-
+@section('title')
+    Login
+@endsection
 @section('mainContent')
 <div class="account_grid">
 	<div class=" login-right">
 		<h3>REGISTERED CUSTOMERS</h3>
 		<p>If you have an account with us, please log in.</p>
-		<form>
+		<form action="{{ route('userLogin') }}" method="get">
 			<div>
 				<span>Email Address<label>*</label></span>
 				<input type="text">

@@ -1,5 +1,7 @@
 @extends('front-end.master')
-
+@section('title')
+    Products
+@endsection
 @section('mainContent')
 <div class="women-product">
     <div class=" w_content">

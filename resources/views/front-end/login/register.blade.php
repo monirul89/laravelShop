@@ -1,6 +1,8 @@
 
 @extends('front-end.master')
-
+@section('title')
+    Register
+@endsection
 @section('mainContent')
     <div class="register">
         <form> 
