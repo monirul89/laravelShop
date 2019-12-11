@@ -4,21 +4,6 @@ Route::get('/', [
     'as'        =>  '/'
 ]);
 
-Route::get('/customerLogin', [
-    'uses'      =>  'CustomerController@index',
-    'as'        =>  'customerLogin'
-]);
-
-Route::get('/user', [
-    'uses'      =>  'CustomerController@userLogin',
-    'as'        =>  'userLogin'
-]);
-
-Route::get('/customerRegister', [
-    'uses'      =>  'CustomerController@register',
-    'as'        =>  'customerRegister'
-]);
-
 Route::get('/products', [
     'uses'      =>  'ProductController@index',
     'as'        =>  'allproducts'

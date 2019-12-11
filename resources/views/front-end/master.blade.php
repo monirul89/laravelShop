@@ -102,10 +102,10 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="header-bottom-right">
-                    <div class="account"><a href="{{ route('customerLogin') }}"><span> </span>YOUR ACCOUNT</a></div>
+                    <div class="account"><a href="{{ route('login') }}"><span> </span>YOUR ACCOUNT</a></div>
                     <ul class="login">
-                        <li><a href="{{ route('customerLogin') }}"><span> </span>LOGIN</a></li> |
-                        <li><a href="{{ route('customerRegister') }} ">SIGNUP</a></li>
+                        <li><a href="{{ route('login') }}"><span> </span>LOGIN</a></li> |
+                        <li><a href="{{ route('register') }}">SIGNUP</a></li>
                     </ul>
                     <div class="cart"><a href="#"><span> </span>CART</a></div>
                     <div class="clearfix"> </div>

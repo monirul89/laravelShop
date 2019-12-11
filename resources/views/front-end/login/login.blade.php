@@ -1,30 +1,38 @@
-@extends('front-end.master')
+@extends('layouts.app')
 @section('title')
     Login
 @endsection
-@section('mainContent')
-<div class="account_grid">
-	<div class=" login-right">
-		<h3>REGISTERED CUSTOMERS</h3>
-		<p>If you have an account with us, please log in.</p>
-		<form action="{{ route('userLogin') }}" method="get">
-			<div>
-				<span>Email Address<label>*</label></span>
-				<input type="text">
-			</div>
-			<div>
-				<span>Password<label>*</label></span>
-				<input type="text">
-			</div>
-			<a class="forgot" href="#">Forgot Your Password?</a>
-			<input type="submit" value="Login">
-		</form>
-	</div>
-	<div class=" login-left">
-		<h3>NEW CUSTOMERS</h3>
-		<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-		<a class="acount-btn" href="{{ route('customerRegister') }}">Create an Account</a>
-	</div>
-	<div class="clearfix"> </div>
-</div>
+@section('loginBody')
+<div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <label for="inputEmail">Email address</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <label for="inputPassword">Password</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me">
+                Remember Password
+              </label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" href="{{ route('uadmin') }}">Login</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="register.html">Register an Account</a>
+          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
 @endsection()
