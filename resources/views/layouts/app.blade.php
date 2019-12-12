@@ -23,8 +23,9 @@
 
   <div class="container">
     @yield('loginBody')
+    
   </div>
-
+  
   <!-- Bootstrap core JavaScript-->
   <script src="{{ asset('/') }}/back-end/assets/vendor/jquery/jquery.min.js"></script>
   <script src="{{ asset('/') }}/back-end/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
