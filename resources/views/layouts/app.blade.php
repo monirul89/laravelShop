@@ -22,6 +22,7 @@
 <body class="bg-dark">
 
   <div class="container">
+  
     @yield('loginBody')
     
   </div>
