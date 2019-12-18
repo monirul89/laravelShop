@@ -89,8 +89,8 @@
             <div class="container">
                 <div class="header-bottom-left">
                     <div class="logo">
-                        <a href="{{ route('/')}}"><img src="{{ asset('/') }}/front-end/assets/images/logo.png"
-                                alt=" " /></a>
+                        <a href="{{ route('/')}}">
+                        <img src="{{ asset('/') }}/front-end/assets/images/logo1.png" alt="" /></a>
                     </div>
                     <div class="search">
                         <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {
