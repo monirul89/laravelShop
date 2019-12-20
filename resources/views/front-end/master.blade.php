@@ -116,7 +116,14 @@
     </div>
     <!---->
     <div class="container">
+
+
+
         @yield('mainContent')
+
+
+
+        
         <div class="sub-cate">
             <div class=" top-nav rsidebar span_1_of_left">
                 <h3 class="cate">CATEGORIES</h3>

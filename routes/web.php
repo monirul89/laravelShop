@@ -19,9 +19,9 @@ Route::get('/product', [
     'as'        =>  'singleProduct'
 ]);
 
-Route::get('/admin', [
+Route::get('/user', [
     'uses'      =>  'DashboardController@index',
-    'as'        =>  'uadmin'
+    'as'        =>  'userProfile'
 ]);
 
 Auth::routes();

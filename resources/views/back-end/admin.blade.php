@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-        <a class="navbar-brand mr-1" href="index.html">Admin Panel</a>
+        <a class="navbar-brand mr-1" href="{{ route('home') }}">Admin Panel</a>
 
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
@@ -80,7 +80,7 @@
                     <i class="fas fa-user-circle fa-fw"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="{{ route('userProfile') }}">Settings</a>
                     <a class="dropdown-item" href="#">Activity Log</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
@@ -96,7 +96,7 @@
         <ul class="sidebar navbar-nav">
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('home') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -160,9 +160,9 @@
                     <i class="fas fa-angle-down fa-pull-right"></i>
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu4">
-                    <li><a href="404.html">Profile</a></li>
-                    <li><a href="500.html">Edit Profile</a></li>
-                    <li><a href="blank.html">Setting</a></li>
+                <li><a href="{{ route('userProfile') }}">Settings</a></li>
+                    <li><a href="#">Details Profile</a></li>
+                    
                 </ul>
             </li>
 
