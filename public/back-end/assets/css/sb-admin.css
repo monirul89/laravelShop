@@ -10775,6 +10775,23 @@ body {
   .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {
     display: none;
   }
+  .sidebar.toggled .dropdown a i.fa-pull-right {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .sidebar.toggled .dropdown a span {
+    font-size: 10.4px;
+  }
+  .sidebar.toggled .dropdown a i {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+.sidebar.toggled li a {
+    text-align: center;
+  }
+
 }
 
 .card-body-icon {
