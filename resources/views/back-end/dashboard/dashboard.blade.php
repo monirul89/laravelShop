@@ -583,4 +583,7 @@ Dashboard
     </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
+<script src="{{ asset('/') }}/back-end/assets/vendor/chart.js/Chart.min.js"></script>
+<script src="{{ asset('/') }}/back-end/assets/js/demo/chart-area-demo.js"></script>
 @endsection
+

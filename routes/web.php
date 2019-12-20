@@ -24,6 +24,15 @@ Route::get('/user', [
     'as'        =>  'userProfile'
 ]);
 
+Route::get('/category', [
+    'uses'      =>  'CategoryControlle@index',
+    'as'        =>  'addCategory'
+]);
+Route::get('/Categories', [
+    'uses'      =>  'CategoryControlle@showCategory',
+    'as'        =>  'showCategory'
+]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

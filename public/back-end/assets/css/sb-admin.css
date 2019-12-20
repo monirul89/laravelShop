@@ -296,6 +296,17 @@ input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
+.publication_status{
+  line-height: 25px;
+}
+.publication_status input[type="radio"]:first-child {
+  margin-left: 5px;
+}
+.publication_status input[type="radio"] {
+  margin: 8px;
+    margin-right: 6px;
+    margin-left: 20px;
+}
 
 input[type="date"],
 input[type="time"],
@@ -8534,7 +8545,9 @@ button.bg-dark:focus {
 .mx-3 {
   margin-left: 1rem !important;
 }
-
+.categoryChart {
+  display: none !important;
+}
 .m-4 {
   margin: 1.5rem !important;
 }
