@@ -4940,6 +4940,10 @@ input[type="button"].btn-block {
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
+  text-align: center;
+  font-size: 20px;
+  color: darkblue;
+  text-transform: uppercase;
 }
 
 .card-header:first-child {
@@ -8545,7 +8549,7 @@ button.bg-dark:focus {
 .mx-3 {
   margin-left: 1rem !important;
 }
-.categoryChart {
+.canvashideChart {
   display: none !important;
 }
 .m-4 {

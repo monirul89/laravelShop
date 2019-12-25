@@ -109,8 +109,8 @@
                     <i class="fas fa-angle-down fa-pull-right"></i>
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu1">
-                    <li><a href="{{ route('addCategory') }}">Add Category</a></li>
-                    <li><a href="{{ route('showCategory') }}">Show Category</a></li>
+                    <li><a href="{{ route('addCategoryForm') }}">Add Category</a></li>
+                    <li><a href="{{ route('manage-categories') }}">Manage Category</a></li>
                 </ul>
             </li>
 

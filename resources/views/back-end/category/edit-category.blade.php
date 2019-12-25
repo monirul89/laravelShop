@@ -2,7 +2,7 @@
 
 
 @section('title')
-Category
+Edit
 @endsection
 
 @section('bodyAdmin')
@@ -18,20 +18,21 @@ tinymce.init({
     <li class="breadcrumb-item">
         <a href="{{ route('home') }}">Dashboard</a>
     </li>
-    <li class="breadcrumb-item active">Add Cateogry</li>
+    <li class="breadcrumb-item active">Edit</li>
 </ol>
 <div> <h2 style="text-align:center">{{ Session::get('message') }} </h2></div>
 <div class="card mx-auto mt-5">
-    <div class="card-header"> Add Cateogry Form </div>
+    <div class="card-header"> Edit Cateogry Form </div>
     <div class="card-body">
-        <form method="POST" enctype="multipart/form-data" action="{{ route('saveCategory') }}" accept-charset="UTF-8">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('updateCategory') }}" accept-charset="UTF-8">
             @csrf
             <div class="form-group clearfix">
                 <label class="col-sm-4 float-left text-right" for="category_name">Category Name : </label>
                 <div class="col-sm-6 float-left col-sm-offset-2">
                     <div class="row">
                         <input type="text" id="Category_Name" name="category_name" class="form-control"
-                            placeholder="Category Name">
+                            placeholder="Category Name" value="{{ $category->category_name }}">
+                        <input type="hidden" id="category_id" name="category_id" class="form-control" value="{{ $category->id }}">
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@ tinymce.init({
                 <label class="col-sm-4 float-left text-right" for="category_description">Category Description : </label>
                 <div class="col-sm-6 float-left col-sm-offset-2">
                     <div class="row">
-                        <textarea name="category_description" rows="8" id="textarea11" class="form-control"> </textarea>
+                        <textarea name="category_description" rows="8" id="textarea11" class="form-control">value="{{ $category->category_description }}"</textarea>
                     </div>
                 </div>
             </div>
@@ -49,15 +50,15 @@ tinymce.init({
                 <label class="col-sm-4 float-left text-right" for="publication_status">Publication Status : </label>
                 <div class="col-sm-6 float-left col-sm-offset-2">
                     <div class="row publication_status">
-                        <input type="radio" name="publication_status" value="1">Published
-                        <input type="radio" name="publication_status" checked value="0">Unpublished
+                        <input type="radio" name="publication_status" {{ $category->publication_status == 1 ? 'checked' : '' }} value="1">Published
+                        <input type="radio" name="publication_status" {{ $category->publication_status == 0 ? 'checked' : '' }} value="0">Unpublished
                     </div>
                 </div>
             </div>
             <div class="form-group clearfix">
                 <label class="col-sm-4 float-left text-right"></label>
                 <div class="col-sm-6 float-left col-sm-offset-2">
-                    <input type="submit" class="btn btn-primary btn-block float-right col-sm-8" value="Save Category">
+                    <input type="submit" class="btn btn-primary btn-block float-right col-sm-8" value="Update Category">
                 </div>
             </div>
 
